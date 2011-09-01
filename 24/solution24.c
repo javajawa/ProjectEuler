@@ -1,6 +1,6 @@
-#include <cstdlib>
-#include <cstdio>
-
+#include <stdbool.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 int main(int argc, char** argv)
 {
@@ -8,8 +8,9 @@ int main(int argc, char** argv)
 	unsigned long factorial_values[9] = {362880, 40320, 5040, 720, 120, 24, 6, 2, 1};
 	unsigned long remainder = target;
 	bool numbers[10] = {0,0,0,0,0,0,0,0,0,0};
+	int i;
 
-	for (int i = 0; i < 9; ++i)
+	for (i = 0; i < 9; ++i)
 	{
 		int pos = 0;
 		while(numbers[pos]) ++pos;
@@ -22,7 +23,9 @@ int main(int argc, char** argv)
 		printf("%d", pos);
 		numbers[pos] = 1;
 	}
-	for (int i=0; i<10; ++i) if (!numbers[i]) printf("%d", i);
+	/* Find and print the tenth number */
+	for (i=0; i<10; ++i) if (!numbers[i]) printf("%d", i);
 	printf("\n");
+	return 0;
 }
 
