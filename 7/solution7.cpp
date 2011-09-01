@@ -12,8 +12,8 @@ bool isPrime(long);
 
 int main(int argc, char** argv)
 {
-	int target = (argc > 1) ? atoi(argv[1]) : 20;
-	printf("%d: ",target);
+	int target = (argc > 1) ? atoi(argv[1]) : 10001;
+	printf("Prime %d: ",target);
 
 	primes.push_back(2); long lastprime = 2;
 
@@ -23,7 +23,7 @@ int main(int argc, char** argv)
 		primes.push_back(lastprime);
 	}
 	
-	printf(" = %ld\n", lastprime);
+	printf("%ld\n", lastprime);
 
 	return 0;
 }
